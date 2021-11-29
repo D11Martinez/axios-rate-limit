@@ -121,7 +121,7 @@ AxiosRateLimit.prototype.shift = function () {
  * @param {Number} options.perMilliseconds amount of time to limit concurrent requests.
  * @returns {Object} axios instance with interceptors added
  */
-function axiosRateLimit (axios, options) {
+export function axiosRateLimit (axios, options) {
   var rateLimitInstance = new AxiosRateLimit(axios)
   rateLimitInstance.setRateLimitOptions(options)
 
@@ -132,5 +132,3 @@ function axiosRateLimit (axios, options) {
 
   return axios
 }
-
-module.exports = axiosRateLimit
